@@ -1,0 +1,40 @@
+---
+layout: default
+title: Blog | Nove.io | Posts about Nove.io
+description: Nove is a contact form builder and lead analytics toolkit for photographers.
+classes: blog
+footer_script: scroll.init(undefined, 'blog');
+---
+{% include _splash_blog.html %}
+<section class="section section--blog">
+  <h2 class="post-cards__title"><span class="h2">Featured</span></h2>
+  <ul class="post-cards post-cards--featured">
+    {% for post in site.posts %}
+      {% if post.featured %}
+        {% include _post_card.html post=post type='featured' %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+<section class="section section--blog">
+  <h2 class="post-cards__title"><span class="h2">All</span></h2>
+  <ul class="post-cards">
+    {% for post in site.posts %}
+      {% include _post_card.html post=post type='default' %}
+    {% endfor %}
+  </ul>
+</section>
+<section class="section section--super-narrow section--cta CTA">
+  <section class="CTA__inner">
+    <h2>explore</h2>
+    <ul>
+      {% for category in site.categories %}
+        <h2>
+          <a class="a a--f" href="{{ category.url }}">
+            <span>{{ category.name }}</span>
+          </a>
+        </h2>
+      {% endfor %}
+    </ul>
+  </section>
+</section>

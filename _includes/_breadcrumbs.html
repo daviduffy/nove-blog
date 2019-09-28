@@ -1,0 +1,29 @@
+<nav class="Breadcrumbs">
+  <ol class="Breadcrumbs__list" vocab="http://schema.org/" typeof="BreadcrumbList">
+    <li class="Breadcrumbs__item" property="itemListElement" typeof="ListItem">
+      <a class="a a--f" property="item" typeof="WebPage" href="{{ "/" | relative_url }}">
+        <span class="icon" property="name">Blog</span>
+        <meta property="position" content="1" />
+      </a>
+      <span class="Breadcrumbs__connector">&raquo;</span>
+    </li>
+
+    {% if page.categories.first %}
+      {% assign the_category = site.categories | where: "slug", page.categories.first %}
+      <li class="Breadcrumbs__item" property="itemListElement" typeof="ListItem">
+        <a class="a a--f" property="item" typeof="WebPage" href="{{ the_category.first.url | relative_url }}">
+          <span property="name">{{ the_category.first.name }}</span>
+          <meta property="position" content="2" />
+        </a>
+        <span class="Breadcrumbs__connector">&raquo;</span>
+      </li>
+    {% endif %}
+
+    <li class="Breadcrumbs__item" property="itemListElement" typeof="ListItem">
+       <span property="item" typeof="WebPage">
+          <span property="name">{{ page.title }}</span>
+          <meta property="position" content="3" />
+       </span>
+    </li>
+  </ol>
+</nav>

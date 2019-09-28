@@ -1,0 +1,27 @@
+.ic
+  display: inline-block
+
+.ic--dot
+  width: 0.75rem
+  height: 0.75rem
+  border-radius: 100%
+  border: 1px solid var( --white )
+  background-color: transparent
+  transition: background-color var( --standard-easing-duration ) cubic-bezier( var( --standard-easing-bezier ) )
+
+.ic--gallery
+  width: 1rem
+  margin: 0 auto
+
+.ic--soc
+  width: var( --social-icon-size )
+  height: var( --social-icon-size )
+  position: relative
+  margin: 0 0.5rem
+
+  svg
+    @include abs-centered
+    fill: var( --dark-gray )
+    stroke: var( --dark-gray )
+    max-width: var( --social-icon-size )
+    max-height: var( --social-icon-size )

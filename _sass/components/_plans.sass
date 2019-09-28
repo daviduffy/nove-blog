@@ -1,0 +1,81 @@
+.Plans
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  flex: 1
+  width: 100%
+  @media screen and ($min-width-medium)
+    flex-direction: row
+
+.Plan
+  padding: 0 1rem
+  margin-bottom: 8rem
+  @media screen and ($min-width-medium)
+    margin-bottom: 0
+
+.Plan__img-c
+  width: 100%
+  height: 180px
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  padding-bottom: 2rem
+
+.Plan__img
+  flex: 1
+  max-height: 100%
+
+.Plan__img--sprout
+  max-width: 30%
+
+.Plan__img--tree-sm
+  max-width: 36%
+
+.Plan__stem
+  fill: #48b04b
+
+.Plan__leaf
+  fill: #348f37
+
+.Plan__title
+  font-family: var(--font-poster)
+  text-transform: uppercase
+
+.Plan__body
+  margin: 0 auto
+  padding: 1rem 0 0
+  min-width: 250px
+  max-width: 300px
+  text-align: center
+
+.Plan__benefits
+  padding-left: 0
+
+.Plan__benefit .p,
+.Plan__description
+    font-weight: 300
+
+.Plan__description
+  line-height: 1.5
+
+.Plan__price
+  padding: 1rem 0
+
+.Plan__button
+  background-color: var(--blue)
+  color: var(--white)!important
+  text-transform: uppercase
+  font-family: var(--font-poster)
+  margin: 0 auto 1rem
+  max-width: 230px
+  font-weight: 400
+  font-size: 1.125rem
+
+.Plan__button--concept
+  background: $gradient-concept
+
+.Plan__button--pro
+  background: $gradient-pro
+
+.Plan__button--business
+  background: $gradient-business

@@ -1,0 +1,16 @@
+<header class="OffCanvas__head">
+  <div class="OffCanvas__wordmark">
+    <a class='a a--menu' href='/'>
+      {% include _nove_logo_wordmark.html %}
+    </a>
+  </div>
+  <button class="OffCanvas__trg svg-b" title="close">
+    <svg class="Header__ic Header__ic--t" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.07 70.07"><defs><style>.__t{fill:none;stroke:var(--medium-gray);stroke-miterlimit:10;stroke-width:10px;}</style></defs><line class="__t" x1="3.54" y1="3.54" x2="66.54" y2="66.54"/><line class="__t" x1="66.54" y1="3.54" x2="3.54" y2="66.54"/></svg>
+</button>
+</header>
+<nav class="Header__nav Header__nav--offcanvas">
+  <ul>
+    {% include _navigation_links.html items=site.data.menu_primary %}
+    {% include _navigation_links.html items=site.data.menu_secondary %}
+  </ul>
+</nav>

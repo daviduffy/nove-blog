@@ -1,0 +1,29 @@
+---
+layout: default
+classes: post
+footer_script: scroll.init(undefined, 'post');
+---
+{% include _splash_blog_post.html %}
+<section class="section section--post">
+  <div class="Post">
+    <h1 class="Post__title">{{ page.title }}</h1>
+    <div class="Post__meta">
+      <span class="Post__date">{{ page.date | date_to_string }}</span>
+      {% assign author = site.authors | where: 'short_name', page.author | first %}
+      {% if author %}
+        <a href="{{ author.url }}" class="Post__author">{{ author.name }}</a>
+      {% endif %}
+      {% if page.categories %}
+        {% for category in page.categories %}
+          <a href="{{ category.url }}" class="Post__categories">{{ category.name }}</a>
+        {% endfor %}
+      {% endif %}
+      {% if page.read_duration %}
+        <span class="Post__duration">{{ page.read_duration }} minute read</span>
+      {% endif %}
+    </div>
+    <div class="Post__content">
+      {{ content }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,500 @@
+.section
+  padding: 1rem
+  max-width: 1140px
+
+  @at-root .home .section
+    overflow: hidden
+
+.section__content--overflow
+  min-height: 35vmax
+  @media screen and (orientation: portrait) and ($max-width-smedium)
+    min-height: 60vmax
+  .section__col
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+  .section__col--blurb
+    .p
+      max-width: 400px
+      @media screen and ($min-width-xxlarge)
+        max-width: 700px
+  .section__img
+    img,
+    svg
+      max-width: calc(100% + 40vmin)
+      @media screen and (orientation: portrait)
+        max-height: 600px
+
+.section--get-more
+  .section__content
+    padding-top: 2rem
+  .section__col--blurb
+    margin-right: 2vmax
+
+.section--narrow
+  @include fluid-spacing(padding-left, 56rem, 100rem, 1rem, 20rem)
+  @include fluid-spacing(padding-right, 56rem, 100rem, 1rem, 20rem)
+
+.section--cta
+  max-width: initial
+  margin-top: 0!important
+  position: relative
+  text-align: center
+  display: block
+  background: $gradient-neutral
+
+.section--blog
+  margin: calc(var( --vertical-spacer )/2) auto
+
+.section--get-to-know
+  position: relative
+  overflow: initial!important
+  .huge-logo
+    position: absolute
+    height: var(--huge-logo)
+    width: var(--huge-logo)
+    left: 0
+    transform: translate(-47%, 10%)
+    z-index: -1
+    @media screen and ($min-width-large)
+      transform: translate(-38%, -10%)
+  .section__content
+    width: 100%
+  .section__img
+    margin-left: -4vw
+    svg
+      width: 135%
+      max-width: 92vw
+      transform: rotate(8deg) translateX(-2%)
+      @media screen and ($min-width-medium)
+        width: 150%
+        max-width: initial
+        transform: rotate(8deg)
+  // .section__col--img
+  //   position: absolute
+  //   opacity: 0.4
+  .section__col--blurb
+    margin: 0 1rem
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    transform: translateY(2vmax)
+    .t-cursive
+      margin-bottom: 1rem
+      &:nth-child(1)
+        transform: translateX(-1.5vmax)
+      &:nth-child(2)
+        transform: translateX(-3vmax)
+  @media screen and ($min-width-medium)
+    .section__col--blurb
+      margin: 0
+    .section__col--img
+      position: initial
+      opacity: 1
+
+.section--privacy,
+.section--terms
+  grid-row-gap: 1rem
+
+.section__heading,
+.section__subheading
+  font-family: var( --font-poster )
+  text-align: center
+  text-transform: uppercase
+
+.section__heading
+  font-weight: 400
+  width: 100%
+  text-align: center
+  margin-bottom: 0.75rem
+  @include fluid-spacing(letter-spacing, 37.5rem, 80rem, 0.33rem, 0.45rem)
+
+.section__subheading
+  margin-bottom: 0.75rem
+  @include fluid-spacing(letter-spacing, 37.5rem, 80rem, 0.35rem, 0.5rem)
+
+.section__subheading--minor
+  font-family: var(--font-serif)
+  letter-spacing: initial
+  text-transform: initial
+
+.section--about
+  background-color: var( --stormy-blue )
+  @include fluid-spacing(--img-size, 56.250rem, 80rem, 24rem, 30rem)
+
+.Overview__graphic
+  width: 100%
+  height: 50vh
+  min-height: 200px
+  max-height: 400px
+  margin: 1rem 0 2rem
+
+.Overview__form
+  // translateY 28px
+  clip-path: polygon(-5% -5%, 105% -5%, 105% var(--thread-form-mask), -5% var(--thread-form-mask))
+  transform: translateY(var(--thread-form))
+
+// .Thread
+//   // stroke-dasharray: var(--thread-1-stroke)
+//   stroke-dashoffset: 300
+
+// .Thread--ellipse-1
+//   stroke-dasharray: var(--thread-ellipse-1)
+//   // 220 => 150 for ellipse 1
+
+// .Thread--node
+//   stroke-dasharray: var(--thread-node)
+//   // 300 => 320 for node
+
+// .Thread--small-line
+//   stroke-dasharray: var(--thread-small-line)
+//   // 300 => 307 for small line
+
+// .Thread--large-line
+//   stroke-dasharray: var(--thread-large-line)
+//   // 300 => 333 for larger line
+
+// .Thread--line-endcap
+//   stroke-dasharray: var(--thread-line-endcap)
+//   // 300 => 312 for arrow caps
+
+// .Thread--ellipse-2
+//   stroke-dasharray: var(--thread-ellipse-2)
+//   // 300 => 440 for ellipse 2
+
+// .Thread--ellipse-endcap
+//   stroke-dasharray: var(--thread-ellipse-endcap)
+  // 300 => 312 for arrow caps
+
+// .Puzzle
+//   @media screen and ($min-width-medium)
+//     flex: 1
+//     min-height: 300px
+
+// .Puzzle__line
+//   will-change: stroke-dasharray
+//   stroke-dasharray: var(--puzzle-stroke)
+//   stroke-dashoffset: 700
+//   fill: none
+//   stroke: var(--white)
+//   stroke-miterlimit: 10
+//   stroke-linejoin: round
+//   stroke-linecap: round
+//   stroke-width: 3px
+
+.section__content--top-blurb
+  @include fluid-spacing(max-width, 26rem, 80rem, 24rem, 38rem)
+  margin: 0 auto
+  text-align: center
+
+.section__content--r
+  display: flex
+
+@for $i from 1 through 12
+  .section__col--#{$i}
+    flex: #{$i}
+
+.section--freebie
+  display: block
+  background: var( --medium-gray ) center/cover no-repeat
+  color: var( --white )
+  position: relative
+  &::after
+    content: ''
+    background-color: var(--black)
+    +abs-centered
+    z-index: 1
+    opacity: 0.7
+    bottom: 0
+    margin: auto
+    display: block
+
+  @at-root .engagement .section--freebie
+    background-image: url('../../img/other/seattle-wedding-photographer-amy-galbraith-freebie-004.jpg')
+
+  @at-root .wedding .section--freebie
+    background-image: url('../../img/other/seattle-wedding-photographer-amy-galbraith-freebie-002.jpg')
+    background-position-y: 75%
+
+  @at-root .senior .section--freebie
+    background-image: url('../../img/other/seattle-wedding-photographer-amy-galbraith-freebie-001.jpg')
+
+  @at-root .family .section--freebie
+    background-image: url('../../img/other/seattle-wedding-photographer-amy-galbraith-freebie-003.jpg')
+
+
+
+.section--contact
+  font-family: var( --font-sans )
+
+.section--promo
+  color: var( --color-text-inverted )
+  margin-left: var( --vertical-spacer )!important
+  margin-right: var( --vertical-spacer )!important
+
+.section--sen
+  max-width: 500px
+  margin: auto
+  overflow: initial
+  @media screen and ( $min-width-medium )
+    max-width: 1190px
+  @media screen and ( $min-width-large )
+    max-width: 1190px
+    padding: 1rem 0
+
+// Non-Grid Styles
+// ================================================================
+@if $show-not-grid-styles
+  // @supports not (display: grid)
+  .section
+    margin: var( --vertical-spacer ) auto
+    display: flex
+    flex-direction: column
+    @media screen and ( $min-width-medium )
+      flex-flow: row wrap
+
+  .section--blog
+    margin: calc(var( --vertical-spacer )/2) auto
+
+  .section--intro,
+  .section--gal-blurb
+    margin: calc(var( --vertical-spacer )/2) auto
+    @media screen and ( $min-width-medium )
+      flex-direction: column
+
+  .section--post
+    max-width: 40rem
+    margin-top: 1rem
+
+  .section--intro
+    .section__heading
+      order: 1
+    .section__subheading
+      order: 2
+      margin-top: 1.25rem
+      margin-bottom: 0.75rem
+    .section__content
+      order: 3
+
+  .section--about
+    padding-top: var( --vertical-spacer )
+    padding-bottom: var( --vertical-spacer )
+    position: relative
+    margin-bottom: 0
+
+  .section--notification
+    margin: 0
+
+  .section--recognition
+    display: flex
+    flex-direction: row
+    background-color: var( --cool-dark-gray )
+    color: var( --color-text-inverted )
+    overflow: initial!important
+    margin-top: 0
+    margin-bottom: 0
+    padding-top: 2rem
+    padding-bottom: 2rem
+    @media screen and ( $min-width-smedium )
+      padding-top: 4rem
+      padding-bottom: 4rem
+
+    .section__header
+      flex: 3
+      margin-right: 2rem
+      @media screen and ( $min-width-large )
+        flex: 5
+        margin-right: 6rem
+
+    .t-cursive
+      color: var( --stormy-blue )
+
+  .section--reviews
+    margin-top: 0
+    background-color: var( --white )
+
+    .section__header
+      margin: 2rem auto 1rem
+
+    .section__content
+      display: flex
+      flex-flow: row wrap
+
+  .section--faq
+    display: block
+
+  .section--sen
+    @media screen and ( $min-width-medium )
+      display: flex
+      min-height: 860px
+
+  .section--cta
+    display: block
+
+  .section--contact,
+  .section--promo
+    @media screen and ( $min-width-medium )
+      flex-flow: column
+
+  .section--about-map,
+  .section--hero
+    margin: 0 auto
+    +flex-centered
+
+  .section--hero
+    flex-direction: column
+
+  .section--publications
+    flex-flow: column
+
+// Grid Styles
+// ================================================================
+@if $show-grid-styles
+  @supports (display: grid)
+    .section
+      // margin: 0 auto
+      display: grid
+      grid-template-columns: 1fr
+
+      // grid-template-rows: var( --vertical-spacer ) auto auto auto var( --vertical-spacer )
+
+    // .section--intro
+    //   // grid-template-rows: calc(var( --vertical-spacer )/2) repeat(3, auto) calc(var( --vertical-spacer )/2)
+
+    // .section--about
+    //   padding-top: 0
+    //   padding-bottom: 0
+    //   @media screen and ( $max-width-smedium )
+    //     padding-top: 1rem
+    //     padding-bottom: 1rem
+    //   @media screen and ( $min-width-medium )
+    //     grid-template-rows: var(--vertical-spacer) repeat(30, 1rem) var(--vertical-spacer)
+    //     grid-template-columns: 1fr 1fr
+    //     grid-column-gap: 4rem
+
+    // .section--blog
+    //   display: grid
+    //   grid-template-rows: calc(var( --vertical-spacer ) * 2) auto
+
+    // .section--notification
+    //   grid-template-rows: auto
+
+    // .section--gal-blurb
+    //   grid-template-rows: calc( var( --vertical-spacer ) / 2) auto auto auto var( --vertical-spacer )
+
+    // .section--testm
+    //   grid-template-rows: auto
+    //   grid-template-columns: auto
+    //   padding: 0
+
+    // .section--recognition
+    //   grid-template-columns: 2fr 1fr
+    //   grid-template-rows: 100px
+    //   grid-column-gap: 3rem
+    //   @media screen and ( $min-width-smedium )
+    //     grid-template-columns: 2.7fr 1fr
+    //   @media screen and ( $min-width-medium )
+    //     grid-template-columns: 4fr 1fr
+    //     grid-column-gap: 10rem
+
+    //   .section__header
+    //     flex: 3
+    //     margin-right: 0
+    //     @media screen and ( $min-width-large )
+    //       flex: 5
+    //       margin-right: 0
+
+    // .section--reviews
+    //   grid-template-rows: var(--vertical-spacer) auto auto auto auto var(--vertical-spacer)
+    //   @media screen and ( $min-width-large )
+    //     grid-template-rows: var(--vertical-spacer) auto auto var(--vertical-spacer)
+
+    //   .section__header
+    //     grid-row: 2
+    //     @media screen and ( $min-width-smedium )
+    //       grid-row: 1
+
+    // .section--faq
+    //   display: block
+    //   @media screen and ( $min-width-medium )
+    //     display: grid
+    //     grid-row: 1 / span 3
+
+    // .section--eng
+    //   grid-template-rows: calc(var(--vertical-spacer)/2) auto auto auto var(--vertical-spacer)
+
+    // .section--sen
+    //   min-height: initial
+    //   grid-template-rows: auto repeat(3, 1fr) var(--vertical-spacer)
+    //   grid-template-columns: 1fr
+    //   grid-row-gap: 2rem
+    //   @media screen and ( $min-width-medium )
+    //     grid-template-rows: calc(var(--vertical-spacer)/2) repeat(6, 100px) calc(var(--vertical-spacer)/2)
+    //     grid-template-columns: repeat(14, 1fr)
+    //     grid-column-gap: 2rem
+
+    // .section--fam
+    //   grid-gap: calc(var(--vertical-spacer)/2)
+    //   grid-template-rows: auto auto var(--vertical-spacer)
+
+    // .section--about-map,
+    // .section--hero
+    //   // TODO: fix this
+    //   display: flex
+    //   grid-template-rows: var(--vertical-spacer) auto auto auto var(--vertical-spacer)
+    //   grid-template-columns: repeat(14, 1fr)
+
+    // .section--wa-vendors
+    //   margin: var(--vertical-spacer) 0
+
+    // .section--wa-vendors,
+    // .section--wy-vendors
+    //   display: flex
+
+    // .section--freebie
+    //   padding: 0
+
+    // .section--cta
+    //   display: block
+    //   margin: calc(var(--vertical-spacer)/2) auto
+
+    // .section__heading
+    //   grid-row: 2
+    //   grid-column: 1
+
+    // .section__subheading
+    //   grid-row: 3
+    //   grid-column: 1
+
+    // .section__content
+    //   grid-row: 4
+    //   grid-column: 1
+
+
+// Critical CSS for Home
+// =============================================================================
+.c-section
+  padding: 1rem
+  overflow: hidden
+
+// Non-Grid Styles
+// ================================================================
+@if $show-not-grid-styles
+  .c-section
+    margin: var( --vertical-spacer ) auto
+    display: flex
+    flex-direction: column
+    @media screen and ( $min-width-medium )
+      flex-flow: row wrap
+
+
+// Grid Styles
+// ================================================================
+@if $show-grid-styles
+  @supports (display: grid)
+    .c-section
+      margin: 0 auto
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: var( --vertical-spacer ) auto auto auto var( --vertical-spacer )

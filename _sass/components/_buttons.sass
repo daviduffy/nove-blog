@@ -1,0 +1,105 @@
+// Buttons
+// =============================================================================
+
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  background: var(--white)
+  border: none
+  border-radius: 2px
+  color: var(--black)
+  padding: 0 1rem
+  min-width: 80px
+  min-height: 2.4375rem
+  font-size: 1rem
+  cursor: pointer
+  text-align: center
+  max-height: 52px
+
+.button--inverted
+  margin-left: auto
+  color: var(--white)
+  border: 1px solid
+  background-color: transparent
+  transition: background-color var( --standard-easing-duration ) cubic-bezier( var(--standard-easing-bezier) )
+  &:hover, &:focus, &:active
+    background-color: transparentize(white, 0.45)
+
+.button--cta
+  color: var(--color-text-normal)
+  background-color: var(--orange-light)
+  min-width: 140px
+
+.button--download
+  display: inline-flex
+  align-items: center
+
+.button--un
+  background: none
+  border: 0
+  padding: 0
+
+.button[disabled]
+  opacity: 0.7
+  cursor: not-allowed
+
+// Arrows in content sliders on gallery pages
+// =============================================================================
+.arrow__label
+  position: relative
+  text-align: center
+  display: block
+  width: 100px
+  cursor: pointer
+
+.arrow__t
+  display: block
+
+.isSafari .arrow__t
+  font-weight: 300
+
+.arrow__t--1
+  font-family: var( --font-serif )
+
+.arrow__t--2
+  font-family: var( --font-poster )
+  margin: 0 0 0.33rem
+
+.arrow__t--ic
+  width: 16px
+  height: 24px
+  background: url("../img/icons/arrow.svg") center/contain no-repeat
+  margin: auto
+
+
+// Non-Grid Styles
+// ================================================================
+@if $show-not-grid-styles
+  // @supports not (display: grid)
+  .arrow__label
+    margin: 0 0 0 auto
+
+  .button--grouped
+    display: inline-flex
+    min-width: initial
+    margin-left: 1rem
+
+// Grid Styles
+// ================================================================
+@if $show-grid-styles
+  @supports (display: grid)
+    .button--grouped
+      display: grid
+      margin-left: 0
+
+.S__scss-b
+  color: var(--color-text-normal)!important
+  background-color: var(--mustard-yellow)!important
+  &:hover, &:focus, &:active
+    background-color: var(--mustard-yellow)!important
+
+.S--inv .F__sb
+  border-color: var(--mustard-yellow)!important
+  &:hover, &:focus, &:active
+    background-color: var(--mustard-yellow)!important

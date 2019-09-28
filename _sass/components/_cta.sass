@@ -1,0 +1,41 @@
+// Call to action
+// =============================================================================
+
+.CTA
+  background: $gradient-neutral
+  margin: 0
+
+.CTA--bottom
+  padding-top: 8vmax
+  padding-bottom: 8vmax
+  margin-bottom: 0
+
+.CTA__inner
+  width: 100%
+  display: flex
+  flex-direction: column
+  margin: 0 auto
+  max-width: 800px
+  @media screen and ($min-width-medium)
+    flex-direction: row
+
+.CTA__prompt
+  font-family: var(--font-poster)
+  flex: 1
+  display: none
+  +flex-centered
+
+.CTA__signup
+  flex: 3
+
+.CTA__signup--small
+  margin: 1.125rem 0 0.125rem!important
+  .B
+    background-color: var(--color-action)!important
+  @media screen and ($min-width-medium)
+    display: none
+
+.CTA__signup--large
+  display: none
+  @media screen and ($min-width-medium)
+    display: block

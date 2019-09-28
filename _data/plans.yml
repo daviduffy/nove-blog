@@ -1,0 +1,30 @@
+- id: plan_0
+  name: concept
+  description: Test the platform<br />with no commitment
+  price: Free
+  details: 
+    - 1 contact form free
+    - 1 attachment stored free
+    - 1 email template free
+    - Limited analytics
+- id: plan_1
+  name: pro
+  description: Experience the full platform<br />with monthly billing
+  price: $9.99/mo
+  details:
+    - 4 contact forms
+    - 4 attachments stored
+    - 4 email templates
+    - Custom fields
+    - Full analytics
+- id: plan_2
+  name: business
+  description: Optimize the full platform<br />with yearly savings
+  price: $95.90/yr
+  details:
+    - Unlimited contact forms
+    - Unlimited attachments storage
+    - Unlimited email templates
+    - Custom fields
+    - Full analytics
+    - 20% savings over monthly

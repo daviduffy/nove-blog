@@ -1,0 +1,198 @@
+// Forms
+// =============================================================================
+.form
+  font-family: var(--font-sans)
+
+.form--signup
+  color: var( --white )
+  position: relative
+  // must not be effected by background-overlay which is z-index 1
+  z-index: 2
+
+*::-webkit-input-placeholder
+  color: transparentize(#2e353c, 0.2)
+
+*::-moz-placeholder
+  color: transparentize(#2e353c, 0.2)
+
+*:-ms-input-placeholder
+  color: transparentize(#2e353c, 0.2)
+
+*:-moz-placeholder
+  color: transparentize(#2e353c, 0.2)
+
+.form__input
+  display: block
+  width: 100%
+  height: 2.4375rem
+  margin: 0 0 1rem 
+  padding: 0.5rem
+  color: var(--cool-dark-gray)
+  background-color: transparent
+  border: 2px solid transparentize(#2e353c, 0.4) // var( --black )
+  border-radius: 0
+  font-family: inherit
+  @extend .h6
+  font-weight: 300
+  line-height: 1.5
+  -webkit-transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s
+  transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+  &:focus, &:active
+    outline: none
+    border: 2px solid var(--white)
+    -webkit-box-shadow: 0 0 5px var(--white)
+    box-shadow: 0 0 5px var(--white)
+    -webkit-transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s
+    transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s
+
+.form__input--name,
+.form__input--email
+  @media screen and ( $min-width-smedium )
+    margin: 0 1rem 0 0
+  +fluid-spacing(min-width, 37.5rem, 80rem, 10rem, 15rem)
+
+// .form__input--text
+
+.form__input--grouped
+  margin: 0
+  min-width: 210px
+
+.form__input--select
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28250, 250, 250%29'></polygon></svg>")
+  background-position: 97%
+  background-repeat: no-repeat
+  background-size: 9px 6px
+
+.form__input--textarea
+  min-height: 160px
+
+.form__label
+  display: inline-block
+  font-family: inherit
+  margin-bottom: 0.5rem
+
+.form__label--required
+  position: relative
+  &::after
+    content: "*"
+    display: block
+    position: absolute
+    color: red
+    top: 0
+    right: -15px
+
+.form__group
+  display: flex
+  flex-direction: column
+  @media screen and ( $min-width-medium )
+    flex-direction: row
+
+
+.form__subgroup
+  width: 100%
+  @media screen and ( $min-width-medium )
+    width: initial
+    flex: 1
+    &:nth-child(n+2)
+      margin-left: 1rem
+
+.form__notification,
+.form__download
+  visibility: hidden
+  max-height: 0px
+  overflow: hidden
+  transition: max-height var( --standard-easing-duration ) cubic-bezier(var( --standard-easing-bezier ))
+  text-align: center
+
+.form--submitting .form__notification,
+.form--success .form__download
+    max-height: 80px
+    visibility: visible
+    padding-top: 1rem
+
+
+// Non-Grid Styles
+// ================================================================
+@if $show-not-grid-styles
+  // @supports not (display: grid)
+  .arrow__label
+    margin: 0 0 0 auto
+
+  .form--signup
+    display: flex
+    flex-direction: column
+    margin: var( --vertical-spacer ) auto
+    padding: calc(var( --vertical-spacer )/2) 0
+
+  .form__group--signup
+    @media screen and ( $min-width-smedium )
+      flex-direction: row
+      max-width: 600px
+      margin: auto
+
+
+// Grid Styles
+// ================================================================
+@if $show-grid-styles
+  @supports (display: grid)
+
+    .form--signup
+      display: grid
+      grid-row: 2
+      grid-template-rows: auto
+      grid-template-columns: 1fr
+      margin: 0 auto
+      padding: 0
+
+    .form__group--signup
+      grid-row: 4
+
+    .form__notification,
+    .form__download
+      grid-column: 1
+      align-self: center
+
+    .form__notification
+      grid-row: 5
+
+    .form__download
+      grid-row: 6
+
+// Nove form restyling
+// ==================================================================
+.Signup.Signup
+  max-width: calc(100% - 1rem)
+
+.home .Signup.Signup
+  .F
+    flex-flow: row
+
+  .F__g
+    flex: 1
+    min-width: initial
+    max-width: initial
+    margin-right: 0.875rem
+
+  .F__g--submit
+    flex: unset
+    flex-direction: row
+    margin-right: 0
+
+  .F__g--eventDate
+    flex: 1 0 33%
+    min-width: 33%
+
+  .F__i
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active
+      transition: background-color 5000s ease-in-out 0s!important

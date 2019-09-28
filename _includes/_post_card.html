@@ -1,0 +1,20 @@
+<li class="post-card post-card--{{ include.type }}">
+  <a class="post-card__image" href="{{ include.post.url }}">
+    {% if include.post.image %}
+      <img src="{{ include.post.image }}" alt="" />
+    {% else %}
+      <img src="/assets/img/placeholder.png" alt="" />
+    {% endif %}
+  </a>
+  <div class="post-card__content">
+    <h3 class="post-card__title">
+      <a class="h4" href="{{ include.post.url }}">{{ include.post.title }}</a>
+    </h3>
+    <p class="post-card__blurb">{{ post.blurb | truncate: 133, "…" }}</p>
+    <div class="post-card__footer">
+      <p>{{ include.post.author }}</p>
+      <p>{{ include.post.date }}</p>
+    </div>
+  </div>
+</li>
+

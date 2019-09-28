@@ -1,0 +1,175 @@
+\:root 
+
+  // Colors
+  // ===========================================================================
+
+  // Base
+  --white                      : #fefefe
+  --almost-white               : #e2e2e2
+  --light-gray                 : #cccccc
+  --medium-gray                : #999999
+  --dark-gray                  : #666666
+  --black                      : #0a0a0a
+
+  // Theme
+  --cool-dark-gray             : #2e353c
+  // --mustard-yellow             : rgb(204, 153, 51)
+  // --dusty-teal                 : rgb(85, 100, 107)
+  // --stormy-blue                : rgb(201, 206, 209)
+  --color-action               : #518de5 // blue
+  --green-light                : #60d595
+  --green                      : #1fcc6d
+  --green-dark                 : #179a52
+  --blue-light                 : #79b7e1
+  --blue                       : #518de5
+  --blue-dark                  : #2875a8
+  --orange-light               : #ffb84c
+  --orange                     : #ff9900
+  --orange-dark                : #cc7a00
+  --maroon                     : #c0392b
+  --brown                      : #7F4C00
+
+  // Typography
+  --color-text-normal          : var(--black)
+  --color-text-inverted        : var(--white)
+  --font-cursive               : 'La Belle Aurore', sans-serif
+  --font-poster                : 'Oswald', sans-serif
+  --font-sans                  : 'Montserrat', tahoma, helvetica, sans-serif
+  --font-serif                 : 'Crimson Text', serif
+
+
+
+  // Easing
+  // ===========================================================================
+  --drop-in-easing-bezier      : .73, .14, 1, .99
+  --short-easing-duration      : 0.18s
+  --standard-easing-duration   : 0.33s
+  --long-easing-duration       : 0.66s
+  --standard-easing-bezier     : 0.56, 0.26, 0.37, 0.98
+  --drop-in-animation-delay    : 0.77s
+
+
+
+  // Depth
+  // ===========================================================================
+  --light-box-shadow           : 0 1px 1px rgba(0, 0, 0, 0.25)
+  --normal-box-shadow          : 0 2px 2px rgba(0, 0, 0, 0.3)
+  
+
+  // JS puzzle animation
+  // ===========================================================================
+  --puzzle-stroke              : 700 // 1395 is all finished
+
+  // JS Basic overview animation
+  // ===========================================================================
+  --thread-ellipse-1           : 220
+  // 220 => 150 for ellipse 1
+
+  --thread-node                : 300
+  // 300 => 320 for node
+
+  --thread-small-line          : 300
+  // 300 => 307 for small line
+
+  --thread-large-line          : 300
+  // 300 => 333 for larger line
+
+  --thread-line-endcap         : 300
+  // 300 => 312 for arrow caps
+
+  --thread-ellipse-2           : 300
+  // 300 => 440 for ellipse 2
+
+  --thread-ellipse-endcap      : 300
+  // 300 => 312 for arrow caps
+
+
+  // Sizing and Spacing
+  // ===========================================================================
+  --mosaic-grid-gap            : 0.33rem
+  @include fluid-spacing(--vertical-spacer, 37.5rem, 80rem, 3.75rem, 7.50rem)
+  @include fluid-spacing(--huge-logo, 37.5rem, 80rem, 33rem, 70rem)
+  --social-icon-size           : 1.125rem
+
+  --height                     : 100vh
+  --splash-height              : 100vh
+  --header-height              : 60px
+  --splash-min-height          : initial
+  --splash-portrait-width      : 93vh
+  @media screen and ($min-width-smedium)
+    --splash-portrait-width      : 91vh
+  @media screen and ($min-width-medium)
+    --header-height              : 80px
+  @media screen and ($min-width-large)
+    --splash-height              : calc(100vh - 40px)
+    --splash-min-height          : 500px
+
+
+
+// =============================================================================
+// =============================================================================
+// Back to SASS
+// =============================================================================
+// =============================================================================
+
+// Grid / Not Grid Helpers
+// =============================================================================
+$show-grid-styles            : true
+$show-not-grid-styles        : true
+
+// Sizes
+// ============================================================================
+$height-form-input           : 38px
+
+// Gradients
+// =============================================================================
+$gradient-neutral            : linear-gradient(142deg, rgba(210,210,210,1) 0%, rgba(204,204,204,1) 50%, rgba(153,153,153,1) 100%)
+$gradient-concept            : linear-gradient(142deg, rgba(255,184,76,1) 0%, rgba(255,153,0,1) 50%, rgba(204,122,0,1) 100%)
+$gradient-pro                : linear-gradient(142deg, rgba(121,183,225,1) 0%, rgba(52,152,219,1) 50%, rgba(40,117,168,1) 100%)
+$gradient-business           : linear-gradient(142deg, rgba(96,213,149,1) 0%, rgba(31,205,109,1) 50%, rgba(23,154,82,1) 100%)
+
+// Utilities
+// =============================================================================
+
+.t-cursive
+  font-family: var(--font-cursive)
+
+.t-poster
+  font-family: var(--font-poster)
+  font-weight: 300
+  @include fluid-spacing(letter-spacing, 37.5rem, 80rem, 0.33rem, 0.45rem)
+
+.t-serif
+  font-family: var(--font-serif)
+
+.t-sans
+  font-family: var(--font-sans)
+
+.t-up
+  text-transform: uppercase
+
+.t-lo
+  text-transform: lowercase
+
+.t-it
+  font-style: italic
+
+.svg-b
+  background: none
+  border: none
+  cursor: pointer
+
+.txt-l
+  text-align: left
+
+.txt-c
+  text-align: center
+
+.txt-r
+  text-align: right
+
+.hidden
+  display: none
+
+.block
+  display: block

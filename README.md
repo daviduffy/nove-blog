@@ -1,2 +1,2 @@
-# nove-blog
-a blog for nove
+# nove-marketing-jekyll
+Jekyll version of nove marketing

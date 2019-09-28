@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog | Nove.io | Posts about Nove.io
+classes: blog
+footer_script: scroll.init(undefined, 'blog');
+---
+{% include _splash_blog.html %}
+<section class="section section--narrow section--blog">
+  <h2>Posts</h2>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <h2><a class="a a--f" href="{{ post.url }}"><span>{{ post.title }}</span></a></h2>
+        <p>{{ post.blurb }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  <h2>Categories</h2>
+  <ul>
+    {% for category in site.categories %}
+      <h2>
+        <a class="a a--f" href="{{ category.url }}">
+          <span>{{ category.name }}</span>
+        </a>
+      </h2>
+    {% endfor %}
+  </ul>
+</section>

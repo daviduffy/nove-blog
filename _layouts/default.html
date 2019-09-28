@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="all, index, follow, noodp, noydir">
+    <link rel="manifest" href="application.webmanifest">
+    <title>{{ page.title }}</title>
+    <script type="application/ld+json">
+      { "@context" : "http://schema.org",
+        "@type" : "LocalBusiness",
+        "url" : "https://nove.io/",
+        "logo" : "https://nove.io/assets/img/nove_logo_wordmark.png",
+        "image" : "https://nove.io/assets/img/desktop_analytics_screenshot.png",
+        "name" : "Nove.io",
+        "sameas" : ["https://www.youtube.com/channel/UC_aXfmHBklgSD8aPugjlmcQ", "https://www.instagram.com/nove__io/", "https://twitter.com/nove_io/"],
+        "contactPoint" : [
+          { "@type" : "ContactPoint",
+            "email" : "support@nove.io",
+            "url" : "https://www.nove.io/signup",
+            "contactType" : "sales",
+            "areaServed" : "US"
+          } ] }
+      </script>
+    <style id="style_target"></style>
+    {% if site.header_script %}
+      <script>{{ site.header_script }}</script>
+    {% endif %}
+    <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+    {% feed_meta %}
+    {% seo %}
+  </head>
+  <body>
+    <div class="OffCanvas">
+      <div class="OffCanvas__menu">
+        {% include _offcanvas_menu.html %}
+      </div>
+      <div class="OffCanvas__x"></div>
+    </div>
+    <main class="Main {{ page.classes }}">
+      {% include _header.html %}
+      {{ content }}
+      {% include _footer.html %}
+    </main>
+    {% if site.footer_script %}
+      <script>{{ site.footer_script }}</script>
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,102 @@
+.Header
+  position: fixed
+  top: 0
+  width: 100%
+  display: flex
+  transition: background-color var( --standard-easing-duration ) cubic-bezier( var(--standard-easing-bezier) )
+  @media screen and ($min-width-medium)
+    justify-content: space-between
+
+.Wordmark--inv
+  display: none
+
+.Header--home
+  color: var(--white)
+  .Header__ic
+    stroke: var(--white)
+  .Header__link
+    color: var(--white)
+  .Header__link--logo
+    width: 124px
+  .Wordmark
+    position: absolute
+    opacity: 0
+    transition: opacity var( --standard-easing-duration ) cubic-bezier( var(--standard-easing-bezier) )
+  .Wordmark--inv
+    display: block
+    opacity: 1
+
+
+.Header--inverted
+  background-color: var(--white)
+  &.Header--home
+    color: var(--color-text-normal)
+    .Wordmark
+      opacity: 1
+    .Wordmark--inv
+      opacity: 0
+  .Header__ic
+    stroke: var(--color-text-normal)
+  .Header__link
+    color: var(--color-text-normal)
+
+.Header__nav--offcanvas
+  .Header__link
+    margin: 0 1rem
+
+.Header__nav--large
+  display: none
+  @media screen and ($min-width-medium)
+    display: block
+    ul
+      display: flex
+
+.Header__ic
+  stroke: var(--medium-gray)
+
+.Header__link
+  color: var(--color-text-normal)
+  @media screen and ($min-width-medium)
+    padding: 0.125rem 0.875rem
+    display: flex
+    justify-content: center
+
+  .a
+    width: 100%
+    height: 3.33rem
+    display: flex
+    align-items: center
+    color: inherit
+
+  // .h6
+  //   color: var(--color-text-normal)
+  //   &:visited
+  //     color: var(--color-text-normal)
+
+.Header__link--logo
+  .a
+    height: 2.75rem
+  svg
+    width: 6rem
+
+.Header__link--log-in .a
+  border: 1px solid
+  border-radius: 2px
+  min-width: 8rem
+  justify-content: center
+
+.Header__link--home
+  @media screen and ($min-width-medium)
+    display: none
+
+.Header--inv
+  
+  .Header__ic--b
+    stroke: var( --color-text-normal )
+
+.Header__ic.Header__ic
+  @include fluid-spacing(width, 37.5rem, 80rem, 1.5rem, 2rem)
+  transition: stroke var( --standard-easing-duration ) cubic-bezier( var( --standard-easing-bezier ) )
+
+.Header__ic--b
+  stroke: var(--medium-gray)

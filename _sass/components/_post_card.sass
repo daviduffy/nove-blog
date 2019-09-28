@@ -1,0 +1,51 @@
+.post-cards
+  display: grid
+  grid-gap: 2rem
+  @media screen and ($min-width-smedium)
+    grid-template-columns: 1fr 1fr
+    grid-auto-rows: 1fr
+  @media screen and ($min-width-medium)
+    grid-template-columns: 1fr 1fr 1fr
+
+
+.post-cards--featured
+  @media screen and ($min-width-medium)
+    grid-template-columns: 1fr 1fr
+
+
+.post-cards__title
+  border-bottom: 1px solid var(--light-gray)
+  font-weight: 700
+  margin-bottom: 1.875rem
+  .h2
+    border-bottom: 1px solid var(--cool-dark-gray)
+    position: relative
+    top: 1px
+
+.post-card
+  border: 1px solid var(--light-gray)
+  display: flex
+  flex-direction: column
+
+.post-card__image
+  height: 240px
+  img
+    height: 240px
+    object-fit: cover
+    width: 100%
+
+.post-card__title .h4,
+.post-card__blurb
+  @include fluid-spacing(line-height, 37.5rem, 80rem, 1.33rem, 1.55rem)
+
+.post-card__title
+  margin-bottom: 1rem
+  .h4
+    font-weight: 600
+
+.post-card__content
+  flex: 1 0 120px
+  padding: 1.125rem
+
+.post-card__footer
+  min-height: 40px

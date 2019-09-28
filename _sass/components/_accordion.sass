@@ -1,0 +1,58 @@
+.Acrd
+  &:last-child
+    .Acrd__trg
+      border-bottom: 1px solid var(--grey-light)
+
+.Acrd__cont-c
+  transition: max-height var(--easing-duration-standard) cubic-bezier( var(--easing-bezier-standard) )
+  max-height: 0
+  overflow: hidden
+
+.Acrd__cont
+  padding: 1rem 0.75rem 0
+
+.Acrd__trg
+  position: relative
+  height: $height-form-input
+  width: 100%
+  background-color: var(--grey-very-light)
+  border: 1px solid var(--grey-light)
+  border-bottom: 0
+  text-align: left
+  padding-left: 1rem
+  cursor: pointer
+  -webkit-appearance: none
+  
+  & > *
+    // target.value is used to toggle accordions open. don't want target to be something other than button
+    pointer-events: none
+
+  span
+    text-transform: initial
+    margin-bottom: 0
+    font-weight: 300
+
+  &::after
+    position: absolute
+    content: ''
+    width: 1rem
+    height: 1rem
+    right: 0.75rem
+    top: 0
+    bottom: 0
+    margin: auto
+    display: block
+    background: center / contain no-repeat
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOC45MSAxOC4wNiI+PHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQ0NCIgc3Ryb2tlLXdpZHRoPSIzcHgiIHBvaW50cz0iMS43NyAxLjc3IDE0LjUzIDE0LjUzIDI3LjE1IDEuOTIiLz48L3N2Zz4=)
+    transition: transform var(--easing-duration-standard) cubic-bezier( var(--easing-bezier-standard) )
+    transform: none
+  
+.Acrd--o
+  .Acrd__cont-c
+      max-height: 200px
+      max-height: initial
+
+  .Acrd__trg
+    border: 1px solid var(--grey-light)
+    &::after
+      transform: rotate(180deg)

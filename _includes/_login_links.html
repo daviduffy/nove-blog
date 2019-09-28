@@ -1,0 +1,11 @@
+{% for item in include.items %}
+  <li class='Header__link Header__link--{{ item.name | downcase | replace: ' ', '-' }}'>
+    <a
+      class='a a--menu'
+      href='{{ item.url }}'
+      {% if item.name == 'Log In' %}target='_blank' rel='noopener noreferrer'{% endif %}
+    >
+      <span class='h6'>{{ item.name }}</span>
+    </a>
+  </li>
+{% endfor %}

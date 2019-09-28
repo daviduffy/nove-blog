@@ -1,0 +1,115 @@
+// Mini-slideshow fading
+// ================================================================
+@keyframes fade-loop-1
+  0%
+    opacity: 0
+  3%
+    opacity: 1
+  23%
+    opacity: 1
+  25%
+    opacity: 0
+  100%
+    opacity: 0
+// @keyframes fade-loop-2
+//   0% 
+//     opacity: 0
+//   30%
+//     opacity: 0
+//   33%
+//     opacity: 1
+//   60%
+//     opacity: 1
+//   63%
+//     opacity: 0
+//   100%
+//     opacity: 0
+// @keyframes fade-loop-3
+//   0% 
+//     opacity: 0
+//   63%
+//     opacity: 0
+//   66%
+//     opacity: 1
+//   97%
+//     opacity: 1
+//   100%
+//     opacity: 0
+
+@keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes pulse
+  0%
+    transform: none
+  50%
+    transform: scale(1.15)
+  100%
+    transform: none
+
+@keyframes e-1
+  0%
+    opacity: 0
+  25%
+    opacity: 1
+  100%
+    opacity: 1
+@keyframes e-2
+  0%
+    opacity: 0
+  25%
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    opacity: 1
+@keyframes e-3
+  0%
+    opacity: 0
+  25%
+    opacity: 0
+  50%
+    opacity: 0
+  75%
+    opacity: 1
+  100%
+    opacity: 1
+.elpss
+  span
+    @extend .h3
+  @for $i from 1 through 3
+    span:nth-child(#{$i})
+      animation: e-#{$i} 1s linear infinite
+
+// Map Card Image
+@keyframes c-img
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+// Map Card Image
+@keyframes c-link
+  0%
+    transform: translateX(150%)
+  100%
+    transform: none
+
+@keyframes about-text-bg
+  0%
+    background-image: linear-gradient(to left , rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 50%)
+
+  20%
+    background-image: linear-gradient(to left , rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 50%)
+
+  22%
+    background-image: linear-gradient(to left , rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 50%)
+
+  92%
+    background-image: linear-gradient(to left , rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 50%)
+
+  100%
+    background-image: linear-gradient(to left , rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 50%)

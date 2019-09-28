@@ -1,0 +1,85 @@
+.Splash
+  min-height: 400px
+  height: 40vh
+  max-height: 600px
+  margin: 0
+  background: $gradient-neutral
+  padding: var(--vertical-spacer) 0
+  +flex-centered
+  flex-direction: column
+  @media screen and ($min-width-xxlarge)
+    max-height: initial
+
+.Splash--plans
+  position: relative
+
+.Splash__headlines
+  position: relative
+  width: 80%
+  text-align: center
+
+.Splash--home
+  background: $gradient-pro
+  height: 80vh
+  min-height: 280px
+  max-height: 800px
+
+  .Splash__headline
+    color: var(--white)
+    position: absolute
+    +abs-centered
+    opacity: 0
+    font-weight: 300
+
+  .Splash__headline--1
+    animation: fade-loop-1 16s linear infinite
+
+  .Splash__headline--2
+    animation: fade-loop-1 16s linear infinite
+    animation-delay: 4s
+
+  .Splash__headline--3
+    animation: fade-loop-1 16s linear infinite
+    animation-delay: 8s
+
+  .Splash__headline--4
+    animation: fade-loop-1 16s linear infinite
+    animation-delay: 12s
+
+.Splash__ctas
+  width: 50%
+  position: relative
+  top: 5rem
+  display: flex
+  justify-content: center
+  flex-direction: column
+  max-width: 200px
+  margin: 0 auto
+  @media screen and ($min-width-smedium)
+    flex-direction: row
+    top: 3rem
+
+.Splash--blog
+  margin-top: var(--header-height)
+  padding: 1rem
+  min-height: 120px
+  height: 16vh
+
+.Splash__inner
+  display: flex
+  flex-direction: row
+  margin: 0 auto
+  width: 100%
+  max-width: 1040px
+  align-items: center
+
+.Splash__cta
+  background: linear-gradient(142deg,#ffb84c 0,#f90 50%,#da8507 100%)
+  color: var(--white)!important
+
+.Splash__cta--secondary
+  background: unset
+  background-color: rgba(255, 255, 255, 0.45)
+  margin-top: 1rem
+  @media screen and ($min-width-smedium)
+    margin: 0 0 0 1rem

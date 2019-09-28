@@ -1,0 +1,71 @@
+- name: Contact Forms
+  blurb: Nove makes creating a custom contact form easy. Add, remove, and
+  text: Nove makes creating a custom contact form easy. Add, remove, and re-arrange any field, customize the text, and add colors and styles that match your website. Save your settings and come back to update them at any time.
+  attributes:
+    - 1
+    - 4
+    - Unlimited
+- name: Contact Timelines
+  blurb: The Contact Timeline is a toolkit that helps build a record of the four major events that occur while working to secure a booking
+  text: "The Contact Timeline is a toolkit that helps build a record of the four major events that occur while working to secure a booking &mdash; Inquiry, Booking, Event, and Deadfile. Nove can record two of them for you automatically: Inquiry and Event. You use the Contact Timeline to send emails, write internal notes, and record last final major event: either Booking or Deadfile"
+  attributes:
+    - true
+    - true
+    - true
+- name: Custom Fields
+  blurb: Custom Fields let you add new space for any information Nove doesn\'t keep track of by default. These fields
+  text: Custom Fields let you add new space for any information Nove doesn\'t keep track of by default. These fields appear on the contact details page, and can be included on any contact form you create.
+  attributes:
+    - false
+    - true
+    - true
+- name: Nove Referral Source # Aldo?
+  blurb: Noves Referral Source makes it easy to assign the correct referral source for any inquiry
+  text: "Noves Referral Source makes it easy to assign the correct referral source for any inquiry, even if the client didn\'t provide it. The algorithm analyzes the contact information, and suggests the most likely match."
+  attributes:
+    - true
+    - true
+    - true
+- name: Nove Analytics
+  blurb: Nove Analytics reveal detailed comparisons of each of the four major events (Inquiry, Booking, Event, Deadfile)
+  text: Nove Analytics reveal detailed comparisons of each of the four major events (Inquiry, Booking, Event, Deadfile). Pro and Business plans can see year-over-year comparisons and projections for the current year. Drill into your referral sources for even more detailed segmentation.
+  attributes:
+    - data: Limited to<br>last 90 days
+      tooltip: Analytics for free accounts only show you information for the last 90 days, but your older data is still there! Upgrade at any time to see analytics on your full business history instantly.
+    - Full
+    - Full
+- name: Email Templates
+  blurb: Email Templates make it easy to respond to your inquiries quickly, right from the app. Use shortcodes to give you a bigger head start
+  text: "Email Templates make it easy to respond to your inquiries quickly, right from the app. Use shortcodes to give you a bigger head start: these little snippets of code are automatically switched out for a real, human-readable values when a template is selected."
+  attributes:
+    - 1
+    - 4
+    - Unlimited
+- name: Attachment Storage
+  blurb: Attachment Storage lets you preload common attachments like pricing guides. Choose from any file
+  text: Attachment Storage lets you preload common attachments like pricing guides. Choose from any file in Attachment Storage when sending an email to a client from the Contact Timeline.
+  attributes:
+    - 1
+    - 4
+    - Unlimited
+- name: CSV import
+  blurb: Already keeping track of your contacts in a spreadsheet? Nove lets you import any existing contact data you already have
+  text: Already keeping track of your contacts in a spreadsheet? Nove lets you import any existing contact data you already have in the accepted CSV format.
+  attributes:
+    - true
+    - true
+    - true
+- name: CSV export
+  blurb: All of the contact data you have stored is exportable at any time. The CSV file can be opened in any spreadsheet editor.
+  text: false
+  attributes:
+    - true
+    - true
+    - true
+- name: Support
+  blurb: Support is handled via a ticketing system within the app.
+  text: false
+  attributes:
+    - true
+    - true
+    - true

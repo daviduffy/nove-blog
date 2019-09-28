@@ -1,0 +1,21 @@
+<header class="Header Header--{{ page.classes }}" style="padding: .75rem;z-index: 5;">
+  <button class="Header__trg svg-b hide-for-medium" style="margin: 0; padding: 0.25rem" title="open">
+    <svg class="Header__ic Header__ic--b" style="fill: none;stroke-miterlimit: 10;stroke-width: 10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.1 63.86"><path d="M0 5h72.1M0 31.74h72.1M72.1 58.86H0"/></svg>
+  </button>
+  <nav class="Header__nav Header__nav--large Header__nav--primary">
+    <ul>
+      <li class='Header__link Header__link--logo'>
+        <a class='a a--menu' href='/'>
+          {% include _nove_logo_wordmark_inv.html %}
+          {% include _nove_logo_wordmark.html %}
+        </a>
+      </li>
+      {% include _navigation_links.html items=site.data.menu_primary %}
+    </ul>
+  </nav>
+  <nav class="Header__nav Header__nav--large Header__nav--secondary">
+    <ul>
+      {% include _login_links.html items=site.data.menu_secondary %}
+    </ul>
+  </nav>
+</header>
